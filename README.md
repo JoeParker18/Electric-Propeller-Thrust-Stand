@@ -21,8 +21,8 @@ A self-directed project: an Arduino-based thrust stand that measures static thru
 First full test completed (Nov 2026): a stepped PWM sweep from 50 to 200 in increments of 10, held about 10 s per step, then stepped back down. Each point is the mean of 50–95 samples. Standard deviation stayed under 0.75 g.
 
 <p align="center">
-  <img src="docs/figures/pwm_vs_time.png" width="48%" alt="PWM command vs time">
-  <img src="docs/figures/thrust_vs_time.png" width="48%" alt="Thrust vs time">
+  <img src="docs/pwm_vs_time.png" width="48%" alt="PWM command vs time">
+  <img src="docs/thrust_vs_time.png" width="48%" alt="Thrust vs time">
 </p>
 
 - **Peak thrust: 38.8 g at PWM 90**
