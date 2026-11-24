@@ -17,12 +17,18 @@ A self-directed project: an Arduino-based thrust stand that measures static thru
 | Supply voltage | Analog sense | A0 |
 
 ## Results
-First full test completed (Nov 2026): a stepped PWM sweep from 50 to 200 in increments of 10, held at each step, then swept back down. Each point is the mean of 50–95 samples. Standard deviation stayed under 0.75 g.
+## Results
+First full test completed (Nov 2026): a stepped PWM sweep from 50 to 200 in increments of 10, held about 10 s per step, then stepped back down. Each point is the mean of 50–95 samples. Standard deviation stayed under 0.75 g.
+
+<p align="center">
+  <img src="docs/figures/pwm_vs_time.png" width="48%" alt="PWM command vs time">
+  <img src="docs/figures/thrust_vs_time.png" width="48%" alt="Thrust vs time">
+</p>
 
 - **Peak thrust: 38.8 g at PWM 90**
 - Thrust then fell steadily to **32.8 g at PWM 200**
 - The down-sweep tracked the up-sweep within about 1 g, so the drop-off is repeatable and not just random noise
-- The load cell read about 3.3 g after the run, up from about 0 g before it (zero drift, still under investigation)
+- The load cell read about 3.3 g after the run, up from about 0 g before it (zero drift, visible at the far right of the thrust plot)
 
 Thrust *falling* at higher command is unexpected. Next step is to work out why, using the logged supply voltage (sag under load?), an RPM sensor, and a re-zero between steps.
 
